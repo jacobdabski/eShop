@@ -4,49 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0be6137-07ab-462e-8270-4f37238233b9" name="Default Changelist" comment="committing untested partly almost completely unit tested implementation">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscounts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/IBasketDiscounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/Discounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/IDiscountFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/IDiscountsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/InMemoryDiscountsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/BuyGetReducedDiscount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/Discount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/ProductTypeDiscount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/conditions/BasketCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/conditions/ExpiringCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductSelector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/company/utils/PriceFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/company/basket/BasketServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/company/basket/BasketTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/DiscounterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/DiscountsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetFreeDiscountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/ValidationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/Basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/Discount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/DiscountsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/DiscountsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductTypeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductTypeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/repositories/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/repositories/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/repositories/IProductTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/repositories/IProductTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/repositories/MemoryProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/repositories/MemoryProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/repositories/MemoryProductTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/repositories/MemoryProductTypeRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="a0be6137-07ab-462e-8270-4f37238233b9" name="Default Changelist" comment="committing untested partly almost completely unit tested implementation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,6 +159,14 @@
       <option name="presentableId" value="Default" />
       <updated>1598272690127</updated>
     </task>
+    <task id="LOCAL-00001" summary="committing untested partly almost completely unit tested implementation">
+      <created>1598903221490</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598903221490</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -222,10 +188,10 @@
     </state>
     <state x="433" y="27" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598883307627" />
     <state x="489" y="27" width="1003" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1598870704496" />
-    <state x="499" y="85" width="912" height="916" key="CommitChangelistDialog2" timestamp="1598902811689">
+    <state x="499" y="85" width="912" height="916" key="CommitChangelistDialog2" timestamp="1598903371059">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="499" y="85" width="912" height="916" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598902811689" />
+    <state x="499" y="85" width="912" height="916" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903371059" />
     <state width="1874" height="343" key="GridCell.Tab.0.bottom" timestamp="1598902702304">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
