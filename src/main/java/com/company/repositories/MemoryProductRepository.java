@@ -1,6 +1,7 @@
 package com.company.repositories;
 
-import com.company.product.Product;
+import com.company.product.ProductBatch;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -9,13 +10,13 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-@Repository
+@Component
 public class MemoryProductRepository implements IProductRepository{
 
-    List<Product> products = new ArrayList<>();
+    List<ProductBatch> products = new ArrayList<>();
 
     @Override
-    public List<Product> retrieveByName(String name) {
+    public List<ProductBatch> retrieveByName(String name) {
         return products.stream().filter((product)-> product.getProductTypeName().equals(name)).collect(Collectors.toList());
     }
 
@@ -30,7 +31,7 @@ public class MemoryProductRepository implements IProductRepository{
     }
 
     @Override
-    public void addProduct(Product product) {
+    public void addProduct(ProductBatch product) {
         product.setId(UUID.randomUUID());
         products.add(product);
     }

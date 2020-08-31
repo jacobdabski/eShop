@@ -7,8 +7,6 @@ import com.company.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Validation;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -20,28 +18,42 @@ public class BasketService {
     @Autowired
     private DiscountsService discountService;
 
-
-    public synchronized Basket createBasket(List<BasketRequestDto> basketDetails) throws ValidationException {
+    /**
+     * Tries to build a basket based on the provided basket requests details,
+     * given the amount of items available per each Product Batch in the inventory.
+     * If the amount of items requested for any of the Product Types exceed the number
+     * items available thereof, the method will throw a ValidationException
+     *
+     * Given the basket is build successfully, it will proceed to apply the discounts;
+     * @param basketDetails
+     * @return the costed Basket
+     * @throws ValidationException
+     */
+    public synchronized Basket priceBasket(List<BasketRequestDto> basketDetails) throws ValidationException {
+        validateBasketRequest(basketDetails);
         Basket basket = new Basket();
-
-        List<BasketProduct> products = new ArrayList<>();
 
         for(BasketRequestDto request: basketDetails){
             List<ProductBatch> batches = productService.getProductBatches(request.getType());
-            int itemsAvailable = batches.stream()
-                    .reduce(0, (partialResult, req) -> partialResult + req.getQuantity(), Integer::sum);
-            if(itemsAvailable - request.getQuantity() < 0){
-                throw new ValidationException("Not enough items available for Product : " + request.getType());
-            }
-            Integer quantity = request.getQuantity();
+
+            int quantityToFulfil = request.getQuantity();
             for(ProductBatch batch: batches){
-                if(quantity == 0){
+                int quantityToBasket = Math.min(batch.getQuantity(), quantityToFulfil);
+
+                basket.addProduct(new BasketProduct(batch, quantityToBasket));
+                quantityToFulfil -= quantityToBasket;
+                if(quantityToFulfil == 0){
                     break;
                 }
-                quantity -= batch.getQuantity();
-                BasketProduct product = new BasketProduct(batch, )
+
             }
 
         }
+        basket.applyDiscounts(discountService.getDiscounter());
+        return basket;
+    }
+
+    private void validateBasketRequest(List<BasketRequestDto> basketDetails) throws ValidationException{
+        //TODO validate that there are indeed enough items available for the basket to be fulfilled
     }
 }

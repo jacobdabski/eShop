@@ -1,6 +1,9 @@
 package com.company.basket;
 
 import com.company.product.ProductBatch;
+import com.company.product.ProductType;
+
+import java.math.BigDecimal;
 
 public class BasketProduct {
 
@@ -26,5 +29,17 @@ public class BasketProduct {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public BigDecimal getBatchPrice(){
+        return product.getPrice().multiply(new BigDecimal(quantity));
+    }
+
+    public BigDecimal getProductPrice(){
+        return product.getPrice();
+    }
+
+    public ProductType getProductType(){
+        return product.getType();
     }
 }

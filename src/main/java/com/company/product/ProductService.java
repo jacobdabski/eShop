@@ -25,7 +25,7 @@ public class ProductService {
      * @param productTypeDto
      * @return
      */
-    public List<ProductBatch> getProductBatches(ProductTypeDto productTypeDto) throws ValidationException{
+    public List<ProductBatch> getProductBatches(ProductTypeDto productTypeDto) {
         //TODO handle more complicated queries
         return productRepo.retrieveByName(productTypeDto.getName());
     }
@@ -39,17 +39,12 @@ public class ProductService {
         productRepo.addProduct(product);
     }
 
-    public void addProductType(ProductTypeDto productType, BigDecimal price) throws ValidationException{
-        ProductType type = new ProductType();
-        type.setName(productType.getName());
-        type.setBrand(productType.getBrand());
-        type.setPrice(price);
-        type.setType(productType.getType());
-        type.setUnit(productType.getUnit());
-        if(productTypeRepository.productExists(type)){
+    public UUID addProductType(ProductType productType, BigDecimal price) throws ValidationException{
+        productType.setPrice(price);
+        if(productTypeRepository.productExists(productType)){
             throw new ValidationException("Product Type already exists");
         }
-        productTypeRepository.addProductType(type);
+        return productTypeRepository.addProductType(productType);
     }
 
 }

@@ -9,18 +9,20 @@ import java.util.UUID;
 /**
  * A ProductBatch represents a priced line of Items
  */
-@Entity
 public class ProductBatch {
 
-    @Id
-    @GeneratedValue
+//  @Id
+//  @GeneratedValue
     private UUID id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "product_type_id", referencedColumnName = "id")
+//  @OneToOne(cascade = CascadeType.ALL)
+//  @JoinColumn(name = "product_type_id", referencedColumnName = "id")
     private ProductType type;
 
-    private int quantity;
+    private LocalDate expiry;
+
+    private int quantityInStock;
+
 
     public ProductType getType() {
         return type;
@@ -31,15 +33,15 @@ public class ProductBatch {
     }
 
     public int getQuantity() {
-        return quantity;
+        return quantityInStock;
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.quantityInStock = quantity;
     }
 
-    public void amendQuantity(int quantity){
-        setQuantity(getQuantity() + quantity);
+    public void amendQuantity(int modifier){
+        this.quantityInStock += modifier;
     }
 
     public String getProductTypeName(){
@@ -54,6 +56,14 @@ public class ProductBatch {
         this.id = id;
     }
 
+    public LocalDate getExpiry() {
+        return expiry;
+    }
+
+    public void setExpiry(LocalDate expiry) {
+        this.expiry = expiry;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -66,5 +76,9 @@ public class ProductBatch {
     @Override
     public int hashCode() {
         return Objects.hash(type, expiry);
+    }
+
+    public BigDecimal getPrice(){
+        return type.getPrice();
     }
 }

@@ -40,11 +40,11 @@ public class ProductTypeDto {
         this.unit = unit;
     }
 
-    public static Builder getBuilder(){
+    public static Builder builder(){
         return new Builder();
     }
 
-    static class Builder {
+    public static class Builder {
 
         private ProductTypeDto dto;
 

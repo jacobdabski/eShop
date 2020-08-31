@@ -27,6 +27,12 @@ public class ProductType {
     @NotNull
     private BigDecimal price;
 
+    public ProductType(String name, String type, String unit){
+        this.name = name;
+        this.type = type;
+        this.unit = unit;
+    }
+
     public String getName() {
         return name;
     }
