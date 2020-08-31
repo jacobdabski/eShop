@@ -18,7 +18,7 @@ public class AppliedDiscounts {
     }
 
     public static AppliedDiscounts of(int discounts, int percentageOff, BigDecimal price){
-        BigDecimal priceModifier = price.multiply(new BigDecimal(percentageOff/100)).multiply(new BigDecimal(discounts));
+        BigDecimal priceModifier = price.multiply(new BigDecimal((double)percentageOff/100)).multiply(new BigDecimal(discounts));
         return new AppliedDiscounts(discounts, percentageOff, priceModifier);
     }
 

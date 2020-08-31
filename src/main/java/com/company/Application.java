@@ -15,6 +15,7 @@ import com.company.utils.PriceFormatter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.math.BigDecimal;
@@ -37,7 +38,7 @@ public class Application {
         if(args.length < 2){
             throw new ValidationException("Bad Request");
         }
-        ApplicationContext context = SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
         BasketService basketService = context.getBean(BasketService.class);
         DiscountsService discountsService = context.getBean(DiscountsService.class);
@@ -51,7 +52,7 @@ public class Application {
             Basket basket = basketService.priceBasket(requests);
             printBasket(basket);
         }
-
+        context.close();
     }
 
     private static void printBasket(Basket basket){
@@ -66,16 +67,17 @@ public class Application {
                 AppliedDiscounts appliedDiscounts = entry.getValue();
                 builder.append(entry.getKey().getProductTypeName());
                 builder.append(" ").append(appliedDiscounts.getPercentageOff());
-                builder.append(" off: ");
-                if(appliedDiscounts.getDiscounts() > 0){
-                    builder.append(" (x ").append(appliedDiscounts.getDiscounts()).append(")");
+                builder.append("% off: ");
+                if(appliedDiscounts.getDiscounts() > 1){
+                    builder.append(" (x ").append(appliedDiscounts.getDiscounts()).append(") ");
                 }
-                builder.append("-").append(PriceFormatter.format(appliedDiscounts.getPriceModifier()));
+                builder.append("-").append(PriceFormatter.format(appliedDiscounts.getPriceModifier())).append('\n');
             });
         }
 
-        builder.append(PriceFormatter.format(basket.getTotal()));
+        builder.append("Total: ").append(PriceFormatter.format(basket.getTotal()));
         System.out.println(builder);
+
     }
 
     private static List<BasketRequestDto> parseBasketRequestsFromNames(List<String> productNames){

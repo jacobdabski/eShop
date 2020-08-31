@@ -8,7 +8,7 @@ public class PriceFormatter {
 
     private static NumberFormat ukCostFormat = NumberFormat.getCurrencyInstance(Locale.UK);
     static{
-        ukCostFormat.setMinimumFractionDigits( 1 );
+        ukCostFormat.setMinimumFractionDigits( 2 );
         ukCostFormat.setMaximumFractionDigits( 2 );
     }
 
