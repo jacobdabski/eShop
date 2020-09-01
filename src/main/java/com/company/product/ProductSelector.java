@@ -12,24 +12,24 @@ import java.util.function.Predicate;
  */
 public class ProductSelector {
 
-    public enum Criterion {
+    public enum Field {
         Name, Type, Brand, Unit
     }
 
-    private Map<Criterion, Predicate<String>> criterionMatchers;
+    private Map<Field, Predicate<String>> criterionMatchers;
 
     private ProductSelector(){
         criterionMatchers = new HashMap<>();
-        for(Criterion criterion: Criterion.values()){
+        for(Field criterion: Field.values()){
             criterionMatchers.put(criterion, (field)-> true);
         }
     }
 
     public boolean matches(ProductType type){
-        return criterionMatchers.get(Criterion.Name).test(type.getName()) &&
-                criterionMatchers.get(Criterion.Type).test(type.getType()) &&
-                criterionMatchers.get(Criterion.Brand).test(type.getBrand()) &&
-                criterionMatchers.get(Criterion.Unit).test(type.getUnit());
+        return criterionMatchers.get(Field.Name).test(type.getName()) &&
+                criterionMatchers.get(Field.Type).test(type.getType()) &&
+                criterionMatchers.get(Field.Brand).test(type.getBrand()) &&
+                criterionMatchers.get(Field.Unit).test(type.getUnit());
     }
 
     public static Builder builder(){
@@ -44,13 +44,13 @@ public class ProductSelector {
             this.selector = new ProductSelector();
         }
 
-        public Builder equals(Criterion criterion, String string){
-            selector.criterionMatchers.put(criterion, (field)-> field.equals(string));
+        public Builder equals(Field field, String string){
+            selector.criterionMatchers.put(field, (value)-> value.equals(string));
             return this;
         }
 
-        public Builder startsWith(Criterion criterion, String string){
-            selector.criterionMatchers.put(criterion, (field)-> field.startsWith(string));
+        public Builder startsWith(Field field, String string){
+            selector.criterionMatchers.put(field, (value)-> value.startsWith(string));
             return this;
         }
 

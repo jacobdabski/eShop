@@ -14,7 +14,6 @@ import com.company.product.*;
 import com.company.utils.PriceFormatter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -55,6 +54,7 @@ public class Application {
         context.close();
     }
 
+    //todo: could refactor this into a helper util class that does this
     private static void printBasket(Basket basket){
         StringBuilder builder = new StringBuilder("Subtotal: ");
         builder.append(PriceFormatter.format(basket.getSubTotal())).append('\n');
@@ -113,9 +113,9 @@ public class Application {
 
         discounts.addDiscount(new Discounter(new BuyGetReducedDiscount(soup, 2, bread, 50), 1));
 
-        ProductSelector selector = ProductSelector.builder().equals(ProductSelector.Criterion.Name, "Apples").get();
+        ProductSelector selector = ProductSelector.builder().equals(ProductSelector.Field.Name, "Apples").get();
         Discount applesDiscount = new ProductTypeDiscount(selector, 10);
-        applesDiscount.setBasketCondition(new ExpiringCondition(LocalDate.of(2020, 8, 6)));
+        applesDiscount.setBasketCondition(new ExpiringCondition(LocalDate.of(2020, 9, 6)));
 
         discounts.addDiscount(new Discounter(applesDiscount, 2));
     }

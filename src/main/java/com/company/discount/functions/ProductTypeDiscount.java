@@ -19,7 +19,6 @@ public class ProductTypeDiscount extends Discount {
     public ProductTypeDiscount(ProductSelector selector, int percentage){
         this.percentage = percentage;
         this.selector = selector;
-
     }
 
     @Override

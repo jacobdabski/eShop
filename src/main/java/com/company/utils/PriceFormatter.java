@@ -12,9 +12,7 @@ public class PriceFormatter {
         ukCostFormat.setMaximumFractionDigits( 2 );
     }
 
-
     public static String format(BigDecimal price){
         return ukCostFormat.format(price.doubleValue());
     }
-
 }

@@ -45,12 +45,14 @@ public class BasketService {
                 if(quantityToFulfil == 0){
                     break;
                 }
-
             }
-
         }
-        basket.applyDiscounts(discountService.getDiscounter());
+        basket.applyDiscounts(getDiscounter());
         return basket;
+    }
+
+    public IBasketDiscounter getDiscounter(){
+        return (products, discounts)-> discountService.getDiscounts().forEach((discounter)-> discounter.apply(products, discounts));
     }
 
     private void validateBasketRequest(List<BasketRequestDto> basketDetails) throws ValidationException{

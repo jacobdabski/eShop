@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a0be6137-07ab-462e-8270-4f37238233b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/Discounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/Discounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/BuyGetReducedDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/BuyGetReducedDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/DiscountsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/DiscountsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/ProductTypeDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/ProductTypeDiscount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductTypeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductTypeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/company/discount/DiscounterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/DiscounterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetFreeDiscountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetFreeDiscountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/utils/PriceFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/utils/PriceFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/company/basket/BasketServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/company/basket/BasketServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetFreeDiscountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetReducedDiscountTest.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,95 +80,87 @@
       <recent name="com.company.discount" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Shop">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.All in eShop (2)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Application" />
-      <module name="Shop" />
-      <option name="PROGRAM_PARAMETERS" value="PriceBasket Apples Milk Bread Apples Soup Soup Bread Soup Soup" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <module name="eShop" />
+      <option name="PROGRAM_PARAMETERS" value="PriceBasket Apples Bread Milk" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Shop (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop" />
+    <configuration name="All in eShop (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eShop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Shop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop" />
+    <configuration name="All in eShop (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eShop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppliedDiscountsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.basket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="All in eShop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eShop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasketServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eShop" />
       <option name="PACKAGE_NAME" value="com.company.basket" />
-      <option name="MAIN_CLASS_NAME" value="com.company.basket.AppliedDiscountsTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.basket.BasketServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppliedDiscountsTest.createDromMultipleDiscounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.basket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.basket" />
-      <option name="MAIN_CLASS_NAME" value="com.company.basket.AppliedDiscountsTest" />
-      <option name="METHOD_NAME" value="createDromMultipleDiscounts" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="JUnit.All in Shop (2)" />
-      <item itemvalue="JUnit.AppliedDiscountsTest" />
-      <item itemvalue="JUnit.AppliedDiscountsTest.createDromMultipleDiscounts" />
-      <item itemvalue="JUnit.All in Shop" />
+      <item itemvalue="JUnit.All in eShop" />
+      <item itemvalue="JUnit.BasketServiceTest" />
+      <item itemvalue="JUnit.All in eShop (1)" />
+      <item itemvalue="JUnit.All in eShop (2)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Shop" />
-        <item itemvalue="JUnit.AppliedDiscountsTest.createDromMultipleDiscounts" />
-        <item itemvalue="JUnit.AppliedDiscountsTest" />
+        <item itemvalue="JUnit.All in eShop (2)" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.All in Shop (2)" />
+        <item itemvalue="JUnit.All in eShop (1)" />
+        <item itemvalue="JUnit.BasketServiceTest" />
+        <item itemvalue="JUnit.All in eShop" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="projectSyncType">
       <map>
+        <entry key="$PROJECT_DIR$/../controlor" value="PREVIEW" />
         <entry key="$USER_HOME$/projects/controlor-intelij" value="PREVIEW" />
         <entry key="$USER_HOME$/projects/controlpanel" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../controlor" value="PREVIEW" />
       </map>
     </option>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a0be6137-07ab-462e-8270-4f37238233b9" name="Default Changelist" comment="" />
@@ -202,6 +192,17 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="committing untested partly almost completely unit tested implementation" />
@@ -311,14 +312,19 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/company/discount/functions/ProductTypeDiscount.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/test/com/company/basket/AppliedDiscountsTest.java</url>
           <line>37</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/company/discount/Discounter.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

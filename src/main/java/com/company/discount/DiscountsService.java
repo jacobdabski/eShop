@@ -24,10 +24,6 @@ public class DiscountsService {
                 .collect(Collectors.toList());
     }
 
-    public IBasketDiscounter getDiscounter(){
-        return (products, discounts)-> getDiscounts().forEach((discounter)-> discounter.apply(products, discounts));
-    }
-
     public void addDiscount(Discounter discounter){
         discountsDao.addDiscount(discounter);
     }
