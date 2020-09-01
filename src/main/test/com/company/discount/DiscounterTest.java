@@ -24,7 +24,7 @@ class DiscounterTest {
         IDiscountFunction globalDiscount = (products) -> {
             Map<ProductBatch, AppliedDiscounts> resultingDiscounts = new HashMap<>();
             products.stream().forEach((product) -> {
-                resultingDiscounts.put(product.getProduct(), AppliedDiscounts.of(product.getQuantity(), 50, new BigDecimal(100)));
+                resultingDiscounts.put(product.getProduct(), AppliedDiscounts.create(product.getQuantity(), 50, new BigDecimal(100)));
             });
             return resultingDiscounts;
         };
@@ -46,7 +46,7 @@ class DiscounterTest {
     @Test
     void applyGlobalDiscountOneProductAlreadyDiscounted(){
         Map<ProductBatch, AppliedDiscounts> appliedDiscounts = new HashMap<>();
-        appliedDiscounts.put(generateProductBatch("bread"), AppliedDiscounts.of(1, 75, new BigDecimal(100)));
+        appliedDiscounts.put(generateProductBatch("bread"), AppliedDiscounts.create(1, 75, new BigDecimal(100)));
 
         String[] productNames = {"bread", "milk", "coffee"};
         List<BasketProduct> basketItems = generateBasket(productNames);

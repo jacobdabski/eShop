@@ -2,6 +2,9 @@ package com.company.product;
 
 import javax.validation.constraints.NotNull;
 
+/**
+ * A DTO pojo to represent all relevant fields from a ProductType
+ */
 public class ProductTypeDto {
     private String name;
     private String type;

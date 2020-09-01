@@ -50,7 +50,7 @@ public class BuyGetReducedDiscount extends Discount {
                 return;
             }
             int quantityToBeDiscountedForProduct = Math.min(quantityToBeDiscounted, product.getQuantity());
-            discounts.put(product.getProduct(), AppliedDiscounts.of(quantityToBeDiscountedForProduct, percentage, product.getProductPrice()));
+            discounts.put(product.getProduct(), AppliedDiscounts.create(quantityToBeDiscountedForProduct, percentage, product.getProductPrice()));
             quantityToBeDiscounted -= quantityToBeDiscountedForProduct;
         }
     }

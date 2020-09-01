@@ -5,6 +5,9 @@ import com.company.product.ProductType;
 
 import java.math.BigDecimal;
 
+/**
+ * Represents how many items there are of a given ProductBatch
+ */
 public class BasketProduct {
 
     private ProductBatch product;

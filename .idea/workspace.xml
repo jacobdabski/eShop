@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a0be6137-07ab-462e-8270-4f37238233b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/utils/PriceFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/utils/PriceFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/basket/BasketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/Discounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/Discounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/BuyGetReducedDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/BuyGetReducedDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/ProductTypeDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/discount/functions/ProductTypeDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/product/ProductTypeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/product/ProductTypeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/company/discount/DiscounterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/DiscounterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetFreeDiscountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/company/discount/functions/BuyGetFreeDiscountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +31,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -60,8 +68,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.company.discount.functions" />
       <recent name="com.company.basket" />
+      <recent name="com.company.discount.functions" />
       <recent name="com.company.discount" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -74,7 +82,7 @@
       <recent name="com.company.discount" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.All in Shop">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Application" />
       <module name="Shop" />
@@ -85,14 +93,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Shop (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Shop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,17 +113,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscounterTest.applyGlobalDiscountOneProductAlreadyDiscounted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppliedDiscountsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Shop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.discount.*" />
+          <option name="PATTERN" value="com.company.basket.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.discount" />
-      <option name="MAIN_CLASS_NAME" value="com.company.discount.DiscounterTest" />
-      <option name="METHOD_NAME" value="applyGlobalDiscountOneProductAlreadyDiscounted" />
+      <option name="PACKAGE_NAME" value="com.company.basket" />
+      <option name="MAIN_CLASS_NAME" value="com.company.basket.AppliedDiscountsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppliedDiscountsTest.createDromMultipleDiscounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.basket.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.basket" />
+      <option name="MAIN_CLASS_NAME" value="com.company.basket.AppliedDiscountsTest" />
+      <option name="METHOD_NAME" value="createDromMultipleDiscounts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,18 +146,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Application" />
-      <item itemvalue="JUnit.All in Shop (1)" />
       <item itemvalue="JUnit.All in Shop (2)" />
+      <item itemvalue="JUnit.AppliedDiscountsTest" />
+      <item itemvalue="JUnit.AppliedDiscountsTest.createDromMultipleDiscounts" />
       <item itemvalue="JUnit.All in Shop" />
-      <item itemvalue="JUnit.DiscounterTest.applyGlobalDiscountOneProductAlreadyDiscounted" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Shop" />
+        <item itemvalue="JUnit.AppliedDiscountsTest.createDromMultipleDiscounts" />
+        <item itemvalue="JUnit.AppliedDiscountsTest" />
         <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.All in Shop (2)" />
-        <item itemvalue="JUnit.All in Shop (1)" />
-        <item itemvalue="JUnit.DiscounterTest.applyGlobalDiscountOneProductAlreadyDiscounted" />
-        <item itemvalue="JUnit.All in Shop" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598903520647</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="committing untested partly almost completely unit tested implementation">
+      <created>1598915887600</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598915887600</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -201,64 +223,70 @@
     </state>
     <state x="433" y="27" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598883307627" />
     <state x="489" y="27" width="1003" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1598870704496" />
-    <state x="754" y="298" key="#xdebugger.evaluate" timestamp="1598914855212">
+    <state x="754" y="298" key="#xdebugger.evaluate" timestamp="1598942684040">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="754" y="298" key="#xdebugger.evaluate/72.27.1848.1053@72.27.1848.1053" timestamp="1598914855212" />
-    <state x="499" y="85" width="912" height="916" key="CommitChangelistDialog2" timestamp="1598903520599">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="754" y="298" key="#xdebugger.evaluate/72.27.1848.1053@72.27.1848.1053" timestamp="1598942684040" />
+    <state x="552" y="85" width="912" height="916" key="CommitChangelistDialog2" timestamp="1598915887482">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="499" y="85" width="912" height="916" key="CommitChangelistDialog2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903520599" />
-    <state width="1802" height="340" key="GridCell.Tab.0.bottom" timestamp="1598915793382">
+    <state x="552" y="85" width="912" height="916" key="CommitChangelistDialog2/72.27.1848.1053@72.27.1848.1053" timestamp="1598915887482" />
+    <state width="466" height="506" key="DebuggerActiveHint" timestamp="1598942659140">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="466" height="506" key="DebuggerActiveHint/72.27.1848.1053@72.27.1848.1053" timestamp="1598942659140" />
+    <state width="1802" height="400" key="GridCell.Tab.0.bottom" timestamp="1598944457533">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1874" height="343" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903555347" />
-    <state width="1802" height="340" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793382" />
-    <state width="1802" height="340" key="GridCell.Tab.0.center" timestamp="1598915793382">
+    <state width="1802" height="400" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1598944457533" />
+    <state width="1802" height="400" key="GridCell.Tab.0.center" timestamp="1598944457530">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1874" height="343" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903555347" />
-    <state width="1802" height="340" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793382" />
-    <state width="1802" height="340" key="GridCell.Tab.0.left" timestamp="1598915793382">
+    <state width="1802" height="400" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1598944457530" />
+    <state width="1802" height="400" key="GridCell.Tab.0.left" timestamp="1598944457528">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1874" height="343" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903555347" />
-    <state width="1802" height="340" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793382" />
-    <state width="1802" height="340" key="GridCell.Tab.0.right" timestamp="1598915793382">
+    <state width="1802" height="400" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1598944457528" />
+    <state width="1802" height="400" key="GridCell.Tab.0.right" timestamp="1598944457532">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1874" height="343" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903555347" />
-    <state width="1802" height="340" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793382" />
-    <state width="1802" height="340" key="GridCell.Tab.1.bottom" timestamp="1598915793383">
+    <state width="1802" height="400" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1598944457532" />
+    <state width="1802" height="395" key="GridCell.Tab.1.bottom" timestamp="1598943096566">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="340" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793383" />
-    <state width="1802" height="340" key="GridCell.Tab.1.center" timestamp="1598915793383">
+    <state width="1802" height="395" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1598943096566" />
+    <state width="1802" height="395" key="GridCell.Tab.1.center" timestamp="1598943096566">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="340" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793383" />
-    <state width="1802" height="340" key="GridCell.Tab.1.left" timestamp="1598915793382">
+    <state width="1802" height="395" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1598943096566" />
+    <state width="1802" height="395" key="GridCell.Tab.1.left" timestamp="1598943096566">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="340" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793382" />
-    <state width="1802" height="340" key="GridCell.Tab.1.right" timestamp="1598915793383">
+    <state width="1802" height="395" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1598943096566" />
+    <state width="1802" height="395" key="GridCell.Tab.1.right" timestamp="1598943096566">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="340" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1598915793383" />
+    <state width="1802" height="395" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1598943096566" />
     <state x="429" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1598876028290">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="429" y="188" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598876028290" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1598727321977" />
-    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598903526863">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="606" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1598915890052">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598903526863" />
-    <state x="713" y="334" width="549" height="445" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1598893449531">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="606" y="276" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1598915890052" />
+    <state x="758" y="334" width="549" height="445" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1598941584663">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="713" y="334" width="549" height="445" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598893449531" />
-    <state x="758" y="334" width="479" height="445" key="com.intellij.testIntegration.createTest.CreateTestDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1598871714259" />
+    <state x="758" y="334" width="479" height="445" key="com.intellij.testIntegration.createTest.CreateTestDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1598941584663" />
     <state x="475" y="62" width="723" height="1018" key="dock-window-1" timestamp="1598914588202">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -268,10 +296,11 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1598730749519" />
-    <state x="623" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1598902135768">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="672" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1598944836461">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="623" y="239" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598902135768" />
+    <state x="672" y="239" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1598944836461" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -287,9 +316,9 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/company/basket/AppliedDiscounts.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/test/com/company/basket/AppliedDiscountsTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

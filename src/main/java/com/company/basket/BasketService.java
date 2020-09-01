@@ -24,8 +24,8 @@ public class BasketService {
      * If the amount of items requested for any of the Product Types exceed the number
      * items available thereof, the method will throw a ValidationException
      *
-     * Given the basket is build successfully, it will proceed to apply the discounts;
-     * @param basketDetails
+     * Given the basket is build successfully, it will proceed to apply the discounts.
+     * @param basketDetails the desired basket
      * @return the costed Basket
      * @throws ValidationException
      */
@@ -54,6 +54,14 @@ public class BasketService {
     }
 
     private void validateBasketRequest(List<BasketRequestDto> basketDetails) throws ValidationException{
-        //TODO validate that there are indeed enough items available for the basket to be fulfilled
+        basketDetails.stream().forEach(details -> {
+            int itemsAvailable = productService.getProductBatches(details.getType()).stream()
+                    .map(ProductBatch::getQuantity)
+                    .reduce(Integer::sum).orElse(0);
+
+            if(itemsAvailable < details.getQuantity()){
+                throw new ValidationException("Cannot cost this basket");
+            }
+        });
     }
 }

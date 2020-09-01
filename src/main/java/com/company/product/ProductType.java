@@ -6,21 +6,36 @@ import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
 
-@Table(uniqueConstraints= @UniqueConstraint(columnNames={"name", "type", "unit", "brand"}))
+/**
+ * Represents a specfic Product Type which is priced.
+ *
+ */
 public class ProductType {
 
     @Id
     @GeneratedValue
     private UUID id;
 
+    /**
+     * Represents the name of the type, ie 'Bread'
+     */
     @NotNull
     private String name;
 
+    /**
+     * Represents the type  ie 'Granary'
+     */
     @NotNull
     private String type;
 
+    /**
+     * Represents the brand if it there are separate brands
+     */
     private String brand = "Default";
 
+    /**
+     * Represents the unit, ie 'Bag' or '10ml sachet'
+     */
     @NotNull
     private String unit;
 

@@ -8,6 +8,8 @@ import java.util.UUID;
 
 /**
  * A ProductBatch represents a priced line of Items
+ * in stock,  with a shared expiry Date.
+ * These items all are of the same ProductType.
  */
 public class ProductBatch {
 

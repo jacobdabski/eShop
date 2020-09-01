@@ -25,7 +25,7 @@ public class ProductTypeDiscount extends Discount {
     @Override
     protected void doApply(List<BasketProduct> products, Map<ProductBatch, AppliedDiscounts> discounts) {
         products.stream().filter(product -> selector.matches(product.getProductType())).forEach(product -> {
-            discounts.put(product.getProduct(), AppliedDiscounts.of(product.getQuantity(), percentage, product.getProductType().getPrice()));
+            discounts.put(product.getProduct(), AppliedDiscounts.create(product.getQuantity(), percentage, product.getProductType().getPrice()));
         });
     }
 }
